@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/book_image_width"
+        android:layout_height="@dimen/book_image_height"
+        android:layout_margin="@dimen/margin8dp"
+        android:contentDescription="@string/no_content_desc"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin16dp"
+        android:layout_marginTop="@dimen/margin8dp"
+        android:ellipsize="end"
+        android:paddingStart="0dp"
+        android:paddingEnd="180dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Book Name" />
+
+    <TextView
+        android:id="@+id/author_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin16dp"
+        android:layout_marginTop="@dimen/margin8dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="220dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/book_title"
+        tools:text="Author" />
+
+    <TextView
+        android:id="@+id/stock_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin16dp"
+        android:layout_marginTop="@dimen/margin8dp"
+        android:text="@string/stock_quantity"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/author_text" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin4dp"
+        android:layout_marginTop="@dimen/margin8dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        app:layout_constraintStart_toEndOf="@id/stock_tag"
+        app:layout_constraintTop_toBottomOf="@id/author_text"
+        tools:text="7" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="@dimen/margin16dp"
+        android:layout_marginTop="@dimen/margin12dp"
+        android:background="@drawable/rupee_bg"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/stock_tag">
+
+        <TextView
+            android:id="@+id/rupee_symbol_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:gravity="center"
+            android:text="@string/rupee_text_symbol"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="@dimen/divider_width_1dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin4dp"
+            android:layout_toEndOf="@id/rupee_symbol_text"
+            android:background="?android:attr/listDivider"
+            android:foreground="@color/colorAccent"
+            tools:targetApi="m" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin12dp"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:layout_toEndOf="@id/rupee_symbol_text"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            tools:text="100.0" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sell_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding16dp"
+        android:layout_marginBottom="@dimen/margin8dp"
+        android:background="@drawable/sell_button_style"
+        android:foreground="?selectableItemBackground"
+        android:paddingStart="@dimen/padding16dp"
+        android:paddingEnd="@dimen/padding16dp"
+        android:text="@string/sell"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        tools:targetApi="m" />
+
+</android.support.constraint.ConstraintLayout>

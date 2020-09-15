@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Activity.DetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin4dp"
+            android:layout_marginBottom="@dimen/margin4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/book_details"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_width_1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin4dp"
+                android:layout_marginTop="@dimen/margin2dp"
+                android:layout_marginEnd="@dimen/margin8dp"
+                android:background="?android:attr/listDivider"
+                android:foreground="@android:color/darker_gray"
+                tools:targetApi="m" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ic_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_image" />
+
+            <ImageView
+                android:id="@+id/book_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/book_height_large"
+                android:layout_marginEnd="@dimen/margin22dp"
+                android:layout_toEndOf="@id/ic_image"
+                android:contentDescription="@string/no_content_desc"
+                android:scaleType="fitXY"
+                tools:src="@tools:sample/avatars" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_book_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_book_image" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginBottom="@dimen/margin2dp"
+                android:layout_toEndOf="@id/ic_book_image">
+
+                <EditText
+                    android:id="@+id/book_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin8dp"
+                    android:layout_marginEnd="@dimen/margin4dp"
+                    android:layout_marginBottom="@dimen/margin8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_book_title"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords"
+                    tools:targetApi="o" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ic_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_author" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginBottom="@dimen/margin2dp"
+                android:layout_toEndOf="@id/ic_author">
+
+                <EditText
+                    android:id="@+id/author_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin8dp"
+                    android:layout_marginEnd="@dimen/margin4dp"
+                    android:layout_marginBottom="@dimen/margin8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_book_author"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords"
+                    tools:targetApi="o" />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ic_isbn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_isbn" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginBottom="@dimen/margin2dp"
+                android:layout_toEndOf="@id/ic_isbn">
+
+                <EditText
+                    android:id="@+id/isbn_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin8dp"
+                    android:layout_marginEnd="@dimen/margin4dp"
+                    android:layout_marginBottom="@dimen/margin8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_book_isbn"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords"
+                    tools:targetApi="o" />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_rupee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_rupee_indian" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginBottom="@dimen/margin2dp"
+                android:layout_toEndOf="@id/ic_rupee">
+
+                <EditText
+                    android:id="@+id/price_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin8dp"
+                    android:layout_marginEnd="@dimen/margin4dp"
+                    android:layout_marginBottom="@dimen/margin8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_book_price"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    tools:targetApi="o" />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_quantity" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin8dp"
+                android:layout_toEndOf="@id/ic_quantity"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding2dp">
+
+                <ImageButton
+                    android:id="@+id/decreaseQuantity"
+                    android:layout_width="@dimen/imageButtonsize"
+                    android:layout_height="@dimen/imageButtonsize"
+                    android:layout_marginStart="@dimen/margin4dp"
+                    android:layout_marginTop="@dimen/margin4dp"
+                    android:background="@drawable/quantity_button_style"
+                    android:contentDescription="@string/no_content_desc"
+                    app:srcCompat="@drawable/ic_remove" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin2dp">
+
+                    <EditText
+                        android:id="@+id/quantity_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin8dp"
+                        android:layout_marginTop="@dimen/margin4dp"
+                        android:layout_marginEnd="@dimen/margin8dp"
+                        android:ems="5"
+                        android:gravity="center"
+                        android:hint="@string/quantity"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        tools:targetApi="o" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageButton
+                    android:id="@+id/increaseQuantity"
+                    android:layout_width="@dimen/imageButtonsize"
+                    android:layout_height="@dimen/imageButtonsize"
+                    android:layout_marginTop="@dimen/margin4dp"
+                    android:background="@drawable/quantity_button_style"
+                    android:contentDescription="@string/no_content_desc"
+                    app:srcCompat="@drawable/ic_add" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin4dp"
+            android:layout_marginBottom="@dimen/margin4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/supplier_details"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_width_1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin4dp"
+                android:layout_marginTop="@dimen/margin2dp"
+                android:layout_marginEnd="@dimen/margin8dp"
+                android:background="?android:attr/listDivider"
+                android:foreground="@android:color/darker_gray"
+                tools:targetApi="m" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_supplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_supplier" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginBottom="@dimen/margin2dp"
+                android:layout_toEndOf="@id/ic_supplier">
+
+                <EditText
+                    android:id="@+id/supplier_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin8dp"
+                    android:layout_marginEnd="@dimen/margin4dp"
+                    android:layout_marginBottom="@dimen/margin8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_supplier_name"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords"
+                    tools:targetApi="o" />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_phone" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginBottom="@dimen/margin2dp"
+                android:layout_toEndOf="@id/ic_phone">
+
+                <EditText
+                    android:id="@+id/supplier_phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin8dp"
+                    android:layout_marginEnd="@dimen/margin4dp"
+                    android:layout_marginBottom="@dimen/margin8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_supplier_phone"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    tools:targetApi="o" />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ic_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin16dp"
+                android:layout_marginTop="@dimen/margin22dp"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:contentDescription="@string/no_content_desc"
+                android:src="@drawable/ic_email" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin16dp"
+                android:layout_marginBottom="@dimen/margin2dp"
+                android:layout_toEndOf="@id/ic_email">
+
+                <EditText
+                    android:id="@+id/supplier_email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin8dp"
+                    android:layout_marginEnd="@dimen/margin4dp"
+                    android:layout_marginBottom="@dimen/margin8dp"
+                    android:ems="10"
+                    android:hint="@string/hint_supplier_email"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    tools:targetApi="o" />
+
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:layout_marginEnd="@dimen/margin8dp"
+            android:background="?android:attr/listDivider"
+            android:foreground="@android:color/darker_gray"
+            tools:targetApi="m" />
+
+        <Button
+            android:id="@+id/order_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin8dp"
+            android:layout_marginBottom="@dimen/margin8dp"
+            android:background="@drawable/sell_button_style"
+            android:foreground="?selectableItemBackground"
+            android:paddingStart="@dimen/padding8dp"
+            android:paddingEnd="@dimen/padding8dp"
+            android:text="@string/order_btn_text"
+            android:textColor="@android:color/white"
+            tools:targetApi="m" />
+    </LinearLayout>
+</ScrollView>

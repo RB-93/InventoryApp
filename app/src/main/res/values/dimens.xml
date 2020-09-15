@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding8dp">8dp</dimen>
+    <dimen name="margin16dp">16dp</dimen>
+    <dimen name="margin8dp">8dp</dimen>
+    <dimen name="margin4dp">4dp</dimen>
+    <dimen name="margin2dp">2dp</dimen>
+    <dimen name="margin22dp">22dp</dimen>
+    <dimen name="padding2dp">2dp</dimen>
+    <dimen name="margin12dp">12dp</dimen>
+    <dimen name="padding16dp">16dp</dimen>
+    <dimen name="book_image_height">190dp</dimen>
+    <dimen name="book_image_width">110dp</dimen>
+    <dimen name="divider_width_1dp">1dp</dimen>
+    <dimen name="imageButtonsize">40dp</dimen>
+    <dimen name="book_height_large">250dp</dimen>
+</resources>
